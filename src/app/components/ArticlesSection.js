@@ -2,11 +2,12 @@
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const ArticlesSection = ({ articles }) => {
   
   const router = useRouter();
-  const [minValue, changeValue] = useState(2);
+  const [minValue, changeValue] = useState(5);
 
   const arr = articles.map((article, index) => (
     <article key={index} className="story" id={`story${index + 1}`}>
